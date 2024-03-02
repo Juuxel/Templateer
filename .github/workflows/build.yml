@@ -11,9 +11,9 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
       - name: Install wasm-pack
-        run: cargo install wasm-pack
+        run: npm install -g wasm-pack
       - name: Build
-        run: gradlew buildWeb
+        run: ./gradlew buildWeb
       - name: Checkout pages
         # Don't run for PRs
         if: github.ref == 'refs/heads/gh-pages-test'
